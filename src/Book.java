@@ -6,10 +6,17 @@ public class Book {
     private boolean isAvailable;
 
     public Book(String id, String title, String author) {
-        if (id.length() != 5) {
-            System.out.println("invalid");
+        if (id.length() == 5) {
+            this.id = id;
+
         }
-        this.id = id;
+
+        else
+        {
+            System.out.println("invalid");
+            System.exit(0);
+        }
+
         this.title = title;
         this.author = author;
         this.isAvailable = true;
