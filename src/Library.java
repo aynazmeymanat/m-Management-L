@@ -37,8 +37,11 @@ public class Library {
         System.out.println("library " + name);
         System.out.println("books");
         for (Book book : books) {
-            book.printBookInfo();
+            if(book.isAvailable())
+                 book.printBookInfo();
         }
+
+
         System.out.println("member");
         for (Member member : members) {
             member.printMemberInfo();
